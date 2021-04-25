@@ -112,35 +112,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12752}
     - Class: 114
-      Script: {instanceID: 12870}
+      Script: {instanceID: 12868}
     - Class: 114
-      Script: {instanceID: 12942}
+      Script: {instanceID: 12940}
     - Class: 114
-      Script: {instanceID: 13384}
+      Script: {instanceID: 13382}
+    - Class: 114
+      Script: {instanceID: 13400}
     - Class: 114
       Script: {instanceID: 13402}
     - Class: 114
-      Script: {instanceID: 13404}
+      Script: {instanceID: 13460}
     - Class: 114
-      Script: {instanceID: 13462}
+      Script: {instanceID: 13582}
     - Class: 114
-      Script: {instanceID: 13584}
+      Script: {instanceID: 13670}
     - Class: 114
-      Script: {instanceID: 13672}
+      Script: {instanceID: 13748}
     - Class: 114
-      Script: {instanceID: 13750}
+      Script: {instanceID: 13854}
     - Class: 114
-      Script: {instanceID: 13856}
+      Script: {instanceID: 13956}
     - Class: 114
-      Script: {instanceID: 13958}
+      Script: {instanceID: 14088}
     - Class: 114
-      Script: {instanceID: 14090}
+      Script: {instanceID: 14110}
     - Class: 114
-      Script: {instanceID: 14112}
+      Script: {instanceID: 14164}
     - Class: 114
-      Script: {instanceID: 14166}
-    - Class: 114
-      Script: {instanceID: 14198}
+      Script: {instanceID: 14196}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -227,25 +227,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12752}
     - Class: 114
-      Script: {instanceID: 12942}
+      Script: {instanceID: 12940}
     - Class: 114
-      Script: {instanceID: 13404}
+      Script: {instanceID: 13402}
     - Class: 114
-      Script: {instanceID: 13462}
+      Script: {instanceID: 13460}
     - Class: 114
-      Script: {instanceID: 13584}
+      Script: {instanceID: 13582}
     - Class: 114
-      Script: {instanceID: 13750}
+      Script: {instanceID: 13748}
     - Class: 114
-      Script: {instanceID: 13856}
+      Script: {instanceID: 13854}
     - Class: 114
-      Script: {instanceID: 14090}
+      Script: {instanceID: 14088}
     - Class: 114
-      Script: {instanceID: 14112}
+      Script: {instanceID: 14110}
     - Class: 114
-      Script: {instanceID: 14166}
+      Script: {instanceID: 14164}
     - Class: 114
-      Script: {instanceID: 14198}
+      Script: {instanceID: 14196}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -933,7 +933,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 5daa875b139f258f4176b4bb1546bbf0
+      Hash: 261529dfc83b5ed8dbfd3f1b160dedd3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RubyController

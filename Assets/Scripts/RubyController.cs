@@ -45,6 +45,7 @@ public class RubyController : MonoBehaviour
     public Text scoreText;
     public Text winText;
     public Text cogText;
+    public GameObject speedGet;
 
     public bool gameOver;
 
@@ -148,6 +149,7 @@ public class RubyController : MonoBehaviour
         }
 
         MovementSpeed();
+        SetSpeedGet();
     }
 
     void FixedUpdate()
@@ -303,5 +305,13 @@ public class RubyController : MonoBehaviour
     void SetCogText()
     {
         cogText.text = "Cogs: " + cogs.ToString();
+    }
+
+    void SetSpeedGet()
+    {
+        if (speedup == true)
+        {
+            speedGet.gameObject.SetActive(true);
+        }
     }
 }

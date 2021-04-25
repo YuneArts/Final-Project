@@ -121,6 +121,7 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   winText: {fileID: 0}
   cogText: {fileID: 0}
+  speedGet: {fileID: 0}
   gameOver: 0
   cogs: 0
   speedup: 0
