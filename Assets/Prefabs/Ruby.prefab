@@ -109,6 +109,10 @@ MonoBehaviour:
   backgroundMusic: {fileID: 8300000, guid: e406c04157c663a43b859646b7ad3c2a, type: 3}
   winMusic: {fileID: 8300000, guid: 564caac3da9a8894ba5ee14809019176, type: 3}
   loseMusic: {fileID: 8300000, guid: 7280f360542e922479d5a3e72cd9feb5, type: 3}
+  talkSound: {fileID: 8300000, guid: ff5033e59c2d9ec488084544178bf434, type: 3}
+  collectSound: {fileID: 8300000, guid: af5f8b64e3f58f24c87ff8f789b04f6c, type: 3}
+  speedCollectible: {fileID: 8300000, guid: 1d28d14895812954a9a79c6c949d5c96, type: 3}
+  fixedRobots: {fileID: 8300000, guid: e37060e1c740c9943baa745160fd5fdd, type: 3}
   healthInceasePrefab: {fileID: 1904455358742069734, guid: fe13ecb591c57c448a210bf5edd5f8e8,
     type: 3}
   healthDecreasePrefab: {fileID: 3553314602109576654, guid: 4646adb58d4190942b1bbd731a2364ee,
@@ -119,6 +123,8 @@ MonoBehaviour:
   cogText: {fileID: 0}
   gameOver: 0
   cogs: 0
+  speedup: 0
+  slow: 0
 --- !u!50 &7161736931468200402
 Rigidbody2D:
   serializedVersion: 4

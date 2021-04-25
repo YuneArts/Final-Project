@@ -33,6 +33,10 @@ public class RubyController : MonoBehaviour
     public AudioClip backgroundMusic;
     public AudioClip winMusic;
     public AudioClip loseMusic;
+    public AudioClip talkSound;
+    public AudioClip collectSound;
+    public AudioClip speedCollectible;
+    public AudioClip fixedRobots;
 
     public GameObject healthInceasePrefab;
     public GameObject healthDecreasePrefab;
@@ -47,6 +51,9 @@ public class RubyController : MonoBehaviour
     public static int level = 1;
 
     public int cogs;
+
+    public bool speedup;
+    public bool slow;
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +72,9 @@ public class RubyController : MonoBehaviour
 
         cogs = 4;
         SetCogText();
+
+        speedup = false;
+        slow = false;
     }
 
     // Update is called once per frame
@@ -116,6 +126,7 @@ public class RubyController : MonoBehaviour
                     if (character != null)
                     {
                         character.DisplayDialog();
+                        PlaySound(talkSound);
                     }
                 }
             }
@@ -135,6 +146,8 @@ public class RubyController : MonoBehaviour
             speed = 0;
             winText.text = "You lose! Press R to restart.";
         }
+
+        MovementSpeed();
     }
 
     void FixedUpdate()
@@ -215,6 +228,53 @@ public class RubyController : MonoBehaviour
             cogs = cogs + 3;
             Destroy(collision.collider.gameObject);
             SetCogText();
+            PlaySound(collectSound);
+        }
+
+        if(collision.collider.tag == "Speedup")
+        {
+            Destroy(collision.collider.gameObject);
+            PlaySound(speedCollectible);
+            speedup = true;
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Slow"))
+        {
+            slow = true;
+        }
+        
+        if (other.gameObject.CompareTag("RemoveSlow"))
+        {
+            slow = false;
+        }
+    }
+
+    public void MovementSpeed()
+    {
+        if (gameOver == false)
+        {
+            if (speedup == true)
+            {
+                speed = 5.0f;
+
+                if (slow == true)
+                {
+                    speed = 2.5f;
+                }
+            }
+
+            if (speedup == false)
+            {
+                speed = 3.0f;
+
+                if (slow == true)
+                {
+                    speed = 1.5f;
+                }
+            }
         }
     }
 
@@ -226,6 +286,7 @@ public class RubyController : MonoBehaviour
             if (level == 1)
             {
                 winText.text = "Talk to Jambi to visit stage two!";
+                PlaySound(fixedRobots);
             }
 
             if (level == 2)
